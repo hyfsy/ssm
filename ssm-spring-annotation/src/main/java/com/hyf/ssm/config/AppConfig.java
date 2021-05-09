@@ -44,6 +44,7 @@ public class AppConfig implements TransactionManagementConfigurer {
     private static final String USERNAME_REF = "jdbc.mysql.username";
     private static final String PASSWORD_REF  = "jdbc.mysql.password";
     private static final String MAPPER_SCAN_BASE_PACKAGE = "com.hyf.ssm.mapper";
+    private static final String MAPPER_LOCATIONS = "classpath:mapper/*Mapper.xml";
     private DataSource dataSource;
 
     @Bean
@@ -86,7 +87,7 @@ public class AppConfig implements TransactionManagementConfigurer {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         sqlSessionFactoryBean.setConfiguration(configuration());
-        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml"));
+        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_LOCATIONS));
         return sqlSessionFactoryBean;
     }
 
