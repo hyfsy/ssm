@@ -1,0 +1,14 @@
+server:
+  port: 8111
+  servlet:
+    context-path: /springboot
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/learn?serverTimezone=UTC&useSSL=true&useUnicode=true&characterEncoding=UTF-8&nullNamePatternMatchesAll=true&allowMultiQueries=true
+    username: root
+    password: hyflearn
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true

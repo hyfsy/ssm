@@ -10,5 +10,6 @@
     <modules>
         <module>ssm-spring-xml</module>
         <module>ssm-spring-annotation</module>
+        <module>ssm-springboot</module>
     </modules>
 </project>

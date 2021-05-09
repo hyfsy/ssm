@@ -1,0 +1,13 @@
+package com.hyf.ssm;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SsmSpringbootApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SsmSpringbootApplication.class, args);
+    }
+
+}
